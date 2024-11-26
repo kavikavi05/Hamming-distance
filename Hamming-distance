@@ -1,0 +1,4 @@
+int hammingDistance(int x, int y) {
+  for (x ^= y, y = 0; x; y += x & 1, x >>= 1);
+  return y;
+}
